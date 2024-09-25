@@ -26,7 +26,44 @@
 ### 👎 Desvantagens
 - Possível gargalo de desempenho: Dependendo da quantidade de objetos, o mediador pode se tornar uma fonte de gargalo e, em caso de falha, comprometer todo o sistema.
 - Complexidade crescente: Na prática, mediadores podem se tornar cada vez mais complexos à medida que o sistema cresce.
+--------
+## 🛠️ Usando o Padrão Mediator com MediatR e CQRS
+- Ao utilizarmos o padrão Mediator, podemos enfrentar um gargalo de desempenho em projetos com grandes fluxos de requisições. Por esse motivo, é comum combinar o Mediator com o padrão CQRS (Command Query Responsibility Segregation), que ajuda a organizar melhor as operações e otimizar a comunicação entre objetos.
 
+### 💡 O que é CQRS?
+O CQRS é um padrão de projeto que separa as operações de leitura e escrita da base de dados em dois modelos distintos, cada um com sua responsabilidade.
+
+- Queries: Responsáveis por realizar leituras e consultas, retornando objetos como resultado.
+- Commands: Responsáveis por ações que alteram a base de dados, como excluir, alterar ou adicionar dados, e não retornam resultados.
+
+### 🔧 Como Funciona?
+- No padrão Mediator + CQRS, temos dois componentes principais, implementados pelas interfaces IRequest e IRequestHandler<TRequest>:
+
+- Request: Representa a mensagem a ser processada (seja uma consulta ou comando).
+- Handler: Responsável por processar uma mensagem específica, de acordo com sua lógica.
+
+- Para que esses componentes funcionem, o Mediator atua como intermediário, recebendo o request e encaminhando-o ao handler correspondente.
+
+Aqui é onde o Mediator, implementado por IMediator, entra em cena, fazendo a comunicação entre as requisições e seus respectivos handlers.
+
+🏗️ Projeto "mediator-app2-mediatr-and-cqrs"
+Neste projeto, foi implementado o padrão Mediator usando a biblioteca MediatR em conjunto com os conceitos do CQRS.
+
+Instalação
+Foi necessário instalar o pacote MediatR através do NuGet:
+
+```` csharp
+Install-Package MediatR
+````
+
+### 📂 Organização das Pastas (não finalizada...)
+#### Domain
+- Entity: Contém nossa entidade principal (neste caso, Produto).
+- Command: Local onde são criados os comandos para operações de criação, atualização e exclusão (create, update e delete).
+- Handler: Responsável por processar os comandos e consultas, contendo os handlers.
+
+Essa estrutura facilita a manutenção e a escalabilidade do projeto, mantendo uma separação clara entre as operações de leitura e escrita.
 
 ### 🔗 Referências
+- 📄 MediatR e CQRS - Macoratti (https://www.macoratti.net/20/07/aspc_mediatr1.htm)
 - 🎥 Padrão Mediator - Macoratti (https://www.youtube.com/watch?v=YM9lbsq4H5s&list=WL&index=3)
