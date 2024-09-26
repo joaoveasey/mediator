@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace mediator_app2_mediatr_and_cqrs.Domain.Handlers;
 
 
-public class ProdutoUpdateCommandHandler : IRequestHandler<ProdutoUpdateCommand>
+public class ProdutoUpdateCommandHandler : IRequestHandler<ProdutoUpdateCommand, string>
 {
     private readonly IMediator mediator;
     private readonly IRepository<Produto> repository;

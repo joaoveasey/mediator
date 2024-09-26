@@ -2,10 +2,11 @@
 using mediator_app2_mediatr_and_cqrs.Domain.Entity;
 using mediator_app2_mediatr_and_cqrs.Notifications;
 using mediator_app2_mediatr_and_cqrs.Repository.Interface;
+using MediatR;
 
 namespace mediator_app2_mediatr_and_cqrs.Domain.Handlers;
 
-public class ProdutoDeleteCommandHandler : IRequestHandler<ProdutoDeleteCommandHandler, string>
+public class ProdutoDeleteCommandHandler : IRequestHandler<ProdutoDeleteCommand, string>
 {
     private readonly IMediator mediator;
     private readonly IRepository<Produto> repository;
