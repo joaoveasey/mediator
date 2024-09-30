@@ -5,7 +5,9 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mediator-app1-whatsapp-group", "mediator-app1-facebook-group\mediator-app1-whatsapp-group.csproj", "{CCD4E9EC-83AB-4E60-B25A-8DD6F8EAA19E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mediator-app2-mediatr-and-cqrs", "mediator-app2-mediatr-and-cqrs\mediator-app2-mediatr-and-cqrs.csproj", "{FB9D6052-C476-4571-898C-7A724BA21EB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mediator-app2-mediatr-and-cqrs", "mediator-app2-mediatr-and-cqrs\mediator-app2-mediatr-and-cqrs.csproj", "{FB9D6052-C476-4571-898C-7A724BA21EB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mediator-app3-mediatr-api", "mediator-app3-mediatr-api\mediator-app3-mediatr-api.csproj", "{D1BC187B-2E73-4B30-A1A3-9A09962F5B16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{FB9D6052-C476-4571-898C-7A724BA21EB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB9D6052-C476-4571-898C-7A724BA21EB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB9D6052-C476-4571-898C-7A724BA21EB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1BC187B-2E73-4B30-A1A3-9A09962F5B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1BC187B-2E73-4B30-A1A3-9A09962F5B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1BC187B-2E73-4B30-A1A3-9A09962F5B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1BC187B-2E73-4B30-A1A3-9A09962F5B16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
