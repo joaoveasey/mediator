@@ -4,7 +4,7 @@ namespace mediator_app3_mediatr_api.Repositories
 {
     public interface ICustomerRepository
     {
-        public Task<Customer> GetCustommer(Guid customerId);
+        public Task<Customer> GetCustomer(Guid customerId);
         public Task<Guid> CreateCustomer(Customer customer);
     }
 }

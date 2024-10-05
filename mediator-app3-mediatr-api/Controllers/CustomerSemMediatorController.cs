@@ -23,7 +23,7 @@ namespace mediator_app3_mediatr_api.Controllers
         {
             _validationService.Validate<Guid>(customerId);
 
-            return await _customerRepository.GetCustommer(customerId);
+            return await _customerRepository.GetCustomer(customerId);
         }
 
         [HttpPost("create-customer")]

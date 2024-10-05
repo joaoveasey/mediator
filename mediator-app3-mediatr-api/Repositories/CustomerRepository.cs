@@ -10,7 +10,7 @@ namespace mediator_app3_mediatr_api.Repositories
             return Guid.NewGuid();
         }
 
-        public async Task<Customer> GetCustommer(Guid customerId)
+        public async Task<Customer> GetCustomer(Guid customerId)
         {
             Customer customer = new Customer
             {

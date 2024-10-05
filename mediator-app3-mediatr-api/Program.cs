@@ -1,3 +1,8 @@
+using mediator_app3_mediatr_api.Repositories;
+using mediator_app3_mediatr_api.Services;
+using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +11,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+builder.Services.AddScoped<IValidationService, ValidationService>();
 
 var app = builder.Build();
 
